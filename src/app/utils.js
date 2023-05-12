@@ -22,7 +22,7 @@ export function debounce(func, timeout = 500) {
   };
 }
 export async function fetchCountries(name) {
-  const apiRoot = import.meta.env.VITE_API_ROOT;
+  const apiRoot = "https://restcountries.com/v3.1";
   const response = await fetch(`${apiRoot}/name/${name}`);
   const data = await response.json();
 
