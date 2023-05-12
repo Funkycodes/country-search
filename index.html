@@ -4,25 +4,78 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Habib Hassan" />
-    <meta
-      name="description"
-      content="Website bootstrapped using vite build system"
-    />
+    <meta name="description" content="Website" />
 
     <meta name="og:type" content="website" />
-    <meta name="og:url" content="placeholder.com" />
-    <meta name="og:title" content="Vite App" />
+    <meta name="og:url" content="themaskedotaku.tech" />
+    <meta name="og:title" content="Country Search" />
     <meta
       name="description"
       content="App bootstrapped using vite build system"
     />
-
-    <link rel="stylesheet" href="./src/styles/style.scss" media="all" />
-    <title>Vite App</title>
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons+Round"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <title>Country Search</title>
   </head>
-  <body>
+  <body data-theme="light">
     <div class="wrapper">
-      <h1>Vite + Sass Template</h1>
+      <header>
+        <h1>Where in the world?</h1>
+        <button class="c-theme-toggler" type="button">
+          <span class="c-theme-toggler__icon material-icons-round">
+            dark_mode
+          </span>
+          <span class="c-theme-toggler__mode"> Dark Mode </span>
+        </button>
+      </header>
+      <section class="pages">
+        <section class="home active">
+          <div>
+            <form accept-charset="utf-8">
+              <label for="country">
+                <span class="country-input-icon material-icons-round">
+                  search
+                </span>
+                <input
+                  type="search"
+                  name="country"
+                  placeholder="Search for a country..."
+                />
+              </label>
+            </form>
+            <div class="c-filter-menu" data-state="closed">
+              <button class="c-filter-menu__trigger">
+                Filter by Region
+                <span class="material-icons-round">chevron_right</span>
+              </button>
+              <ul class="c-filter-menu__wrapper">
+                <li class="c-filter-menu__option">Africa</li>
+                <li class="c-filter-menu__option">America</li>
+                <li class="c-filter-menu__option">Asia</li>
+                <li class="c-filter-menu__option">Europe</li>
+                <li class="c-filter-menu__option">Oceania</li>
+              </ul>
+            </div>
+          </div>
+          <section class="card-gallery">
+            <div class="card-gallery__wrapper"></div>
+          </section>
+        </section>
+        <section class="details">
+          <div>
+            <button class="back-button">Back</button>
+          </div>
+          <section class="details__wrapper"></section>
+        </section>
+      </section>
     </div>
     <script type="module" src="./src/app/main.js"></script>
   </body>

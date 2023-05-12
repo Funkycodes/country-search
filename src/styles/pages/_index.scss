@@ -1,0 +1,28 @@
+.wrapper {
+  background: $vlight-gray;
+  color: $vdark-blue-text;
+  font-size: 14px;
+}
+[data-theme="dark"] .wrapper {
+  background: $vdark-blue-bg;
+  color: $clr-white;
+}
+.pages {
+  position: relative;
+  padding: 0;
+
+  & > section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+    &.active {
+      z-index: 2;
+      opacity: 1;
+    }
+  }
+}

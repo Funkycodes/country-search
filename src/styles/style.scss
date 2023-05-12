@@ -4,7 +4,14 @@
 
 @import "./abstracts/variables";
 
+@import "./shared/theme";
 @import "./shared/typography";
 @import "./shared/links";
 
+@import "./components/header";
+@import "./components/filter-menu";
+@import "./components/card";
+
+@import "./pages/index";
 @import "./pages/home";
+@import "./pages/details";

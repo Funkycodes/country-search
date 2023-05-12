@@ -1,0 +1,29 @@
+header {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 20px 5%;
+
+  background-color: $clr-white;
+  box-shadow: 0px 1px 2px #f2f2f2;
+
+  & h1 {
+    font-size: 16px;
+    font-weight: 800;
+  }
+
+  .c-theme-toggler {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .material-icons-round {
+      font-size: 100%;
+    }
+  }
+}
+[data-theme="dark"] header {
+  background-color: $dark-blue;
+}

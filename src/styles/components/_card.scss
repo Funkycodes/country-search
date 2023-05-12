@@ -1,0 +1,58 @@
+.c-card {
+  border-radius: 8px;
+  background-color: $clr-white;
+  overflow: hidden;
+
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+  opacity: 0;
+
+  cursor: pointer;
+
+  animation: fadeIn 1s both;
+  & img {
+    max-width: 100%;
+    aspect-ratio: 1.67;
+    object-fit: cover;
+  }
+
+  &__content__wrapper {
+    padding: 18px;
+  }
+  &__title {
+    font-weight: 600;
+  }
+  &__details__wrapper {
+    display: grid;
+    gap: 6px;
+    padding-block: 12px;
+
+    & li {
+      display: flex;
+      gap: 4px;
+
+      & .content {
+        color: $dark-gray;
+      }
+    }
+  }
+}
+[data-theme="dark"] .c-card {
+  background-color: $dark-blue;
+
+  & .content {
+    color: $vlight-gray;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

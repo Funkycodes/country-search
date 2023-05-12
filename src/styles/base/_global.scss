@@ -3,14 +3,36 @@
 html {
   height: 100%;
 }
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-scrolling iframe {
+  pointer-events: none;
+}
 body {
-  --full-width: calc(100vw - var(--scrollbar-width));
+  // --full-width: calc(100vw - var(--scrollbar-width));
 
   height: 100%;
-  overflow-y: scroll;
 
   .wrapper {
-    width: var(--full-width);
     min-height: 100%;
+  }
+}
+.wrapper {
+  display: grid;
+  gap: 32px;
+  grid-template-rows: min-content 1fr;
+  & > * {
+    padding-inline: 5%;
   }
 }
