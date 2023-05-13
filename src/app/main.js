@@ -18,7 +18,7 @@ class App {
       orientation: "vertical",
       gestureOrientation: "vertical",
       smoothWheel: true,
-      smoothTouch: false,
+      smoothTouch: true,
       touchMultiplier: 2,
     });
 
